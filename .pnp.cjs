@@ -28,7 +28,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {\
           "packageLocation": "./",\
           "packageDependencies": [\
-            ["astro", "npm:3.2.3"]\
+            ["astro", "npm:3.2.3"],\
+            ["sass", "npm:1.69.0"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -1366,7 +1367,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["bettymaguire", "workspace:."],\
-            ["astro", "npm:3.2.3"]\
+            ["astro", "npm:3.2.3"],\
+            ["sass", "npm:1.69.0"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -2673,6 +2675,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/ieee754-npm-1.2.1-fb63b3caeb-5144c0c981.zip/node_modules/ieee754/",\
           "packageDependencies": [\
             ["ieee754", "npm:1.2.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["immutable", [\
+        ["npm:4.3.4", {\
+          "packageLocation": "./.yarn/cache/immutable-npm-4.3.4-2f54cf641b-de3edd964c.zip/node_modules/immutable/",\
+          "packageDependencies": [\
+            ["immutable", "npm:4.3.4"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -4689,6 +4700,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/safer-buffer-npm-2.1.2-8d5c0b705e-cab8f25ae6.zip/node_modules/safer-buffer/",\
           "packageDependencies": [\
             ["safer-buffer", "npm:2.1.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["sass", [\
+        ["npm:1.69.0", {\
+          "packageLocation": "./.yarn/cache/sass-npm-1.69.0-b7f282719b-eabea31ea3.zip/node_modules/sass/",\
+          "packageDependencies": [\
+            ["sass", "npm:1.69.0"],\
+            ["chokidar", "npm:3.5.3"],\
+            ["immutable", "npm:4.3.4"],\
+            ["source-map-js", "npm:1.0.2"]\
           ],\
           "linkType": "HARD"\
         }]\

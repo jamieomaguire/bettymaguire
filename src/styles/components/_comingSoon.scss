@@ -1,0 +1,10 @@
+.c-comingSoon {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  font-size: var(--f1);
+  
+  > p {
+    margin: 0;
+  }
+}

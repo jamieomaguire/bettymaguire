@@ -1,13 +1,70 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import profileImage from "../images/profile.jpg";
 ---
 
-<Layout title="Betty Maguire">
-	<main class="c-main">
+<Layout title="Betty Maguire - Contact">
+  <main class="c-main p-contact">
+    <div class="c-imageFrame">
+      <Image
+        src={profileImage}
+        alt="A photo of artist, Betty Maguire, sitting on a chair."
+      />
+    </div>
+    <section>
+      <h1>
+        <span>Betty</span>
+        <span>Maguire</span>
+      </h1>
 
-	</main>
+      <p>
+        IS A UK BASED MOVEMENT & VISUAL ARTIST WORKING IN THE ROLES OF ART
+        DIRECTOR, MOVEMENT DIRECTOR & PHOTOGRAPHER.
+      </p>
+
+      <p>
+        WITH A BACKGROUND TRAINING AT WORLDCLASS CONSERVATOIRE NORTHERN SCHOOL
+        OF CONTEMPORARY DANCE, MOVEMENT AND BODY COMPOSITION IS AN INTEGRAL PART
+        OF BETTY'S STUNNING VISUAL WORK.
+      </p>
+
+      <p>
+        MINIMAL DESIGN & STYLING IS INHERENT TO ALL OF BETTY'S IMAGE MAKING,
+        CREATING A CLEAN, CALMING EFFECT ON THE OBSERVER.
+      </p>
+
+      <p>
+        IN ADDITION TO HER ARTISTIC PRACTICE, BETTY CAPTURES MOMENTS IN HER
+        DOCUMENTARY PHOTOGRAPHY, ENJOYING BRINGING HER OBSERVATIONAL EYE TO THE
+        FOREFRONT & CREATING IMAGES THAT CAPTURE MEMORIES AND PERSONAL
+        RELATIONSHIPS ON CAMERA.
+      </p>
+
+      <p>
+        BETTY MAGUIRE IS ALWAYS LOOKING TO FORM NEW RELATIONSHIPS WITH CREATIVES
+        IN THE FORM OF COLLABORATION.
+      </p>
+
+      <div>
+        <p>
+          FOR ENQUIRIES, BOOKINGS, COMMISSIONS & COLLABORATIONS, PLEASE EMAIL:
+        </p>
+
+        <a href="mailto:bettymaguireuk@gmail.com">bettymaguireuk@gmail.com</a>
+
+        <p>SOCIAL MEDIA: @bettymaguireuk</p>
+
+        <p>IMAGES &copy; BETTY MAGUIRE</p>
+
+        <p>
+          ALL RIGHTS RESERVED, NO WORK MAY BE USED WITHOUT PERMISSION OF THE
+          ARTIST.
+        </p>
+      </div>
+    </section>
+  </main>
 </Layout>
 
-<style>
-	
-</style>
+<style></style>
+

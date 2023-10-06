@@ -1,3 +1,7 @@
-body {
-  background-color: red;
-}
+@use './vendor/reset';
+@use './settings/variables';
+@use './layout/shell';
+
+@use './components/header';
+@use './components/nav';
+@use './components/main';

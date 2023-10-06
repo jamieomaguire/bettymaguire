@@ -1,0 +1,26 @@
+.p-contact {
+  display: grid;
+  grid-template-areas:
+  'content'
+  'image';
+
+  gap: var(--s3);
+
+  > .c-imageFrame {
+    grid-area: image;
+
+    > img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  > section {
+    grid-area: content;
+  }
+
+  @media screen and (min-width: 1100px) {
+    grid-template-areas:
+    'image content';
+  }
+}

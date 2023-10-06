@@ -1,0 +1,17 @@
+.c-logo {
+
+  a {
+    font-size: var(--f2);
+    text-decoration: none;
+    color: currentColor;
+    line-height: 1.1;
+  }
+
+  a > span {
+    display: block;
+  }
+
+  > p {
+    margin-top: var(--s-2);
+  }
+}

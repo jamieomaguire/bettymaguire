@@ -12,5 +12,9 @@
   "dependencies": {
     "astro": "3.2.3",
     "sass": "1.69.0"
+  },
+  "volta": {
+    "node": "18.18.0",
+    "yarn": "1.22.19"
   }
 }

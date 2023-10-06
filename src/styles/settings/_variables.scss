@@ -1,4 +1,5 @@
 :root {
+  // Spacing
   --ratio: 1.5;
   --s-5: calc(var(--s-4) / var(--ratio));
   --s-4: calc(var(--s-3) / var(--ratio));
@@ -11,4 +12,17 @@
   --s3: calc(var(--s2) * var(--ratio));
   --s4: calc(var(--s3) * var(--ratio));
   --s5: calc(var(--s4) * var(--ratio));
+
+  // Font sizes
+  --f-5: calc(var(--f-4) / var(--ratio));
+  --f-4: calc(var(--f-3) / var(--ratio));
+  --f-3: calc(var(--f-2) / var(--ratio));
+  --f-2: calc(var(--f-1) / var(--ratio));
+  --f-1: calc(var(--f0) / var(--ratio));
+  --f0: 1rem;  // Base font size
+  --f1: calc(var(--f0) * var(--ratio));
+  --f2: calc(var(--f1) * var(--ratio));
+  --f3: calc(var(--f2) * var(--ratio));
+  --f4: calc(var(--f3) * var(--ratio));
+  --f5: calc(var(--f4) * var(--ratio));
 }

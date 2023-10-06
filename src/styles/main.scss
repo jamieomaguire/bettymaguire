@@ -1,7 +1,13 @@
 @use './vendor/reset';
 @use './settings/variables';
+@use './settings/typography';
+
 @use './layout/shell';
+
+@use './pages/contact';
 
 @use './components/header';
 @use './components/nav';
 @use './components/main';
+@use './components/logo';
+@use './components/imageFrame';

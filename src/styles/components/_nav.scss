@@ -1,11 +1,10 @@
 .c-nav {
-  background-color: coral;
+  // background-color: coral;
 
   > ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    text-transform: uppercase;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -18,11 +17,12 @@
     color: currentColor;
     display: block;
     padding: var(--s-5) var(--s-3);
+    transition: background-color 0.1s ease-in-out;
   }
 
   @media (hover: hover) {
     a:hover {
-      background: red;
+      background-color: #ccc;
     }
   }
 
@@ -30,6 +30,10 @@
     ul {
       flex-direction: column;
       align-items: flex-start;
+    }
+
+    li {
+      width: 100%;
     }
   }
 }

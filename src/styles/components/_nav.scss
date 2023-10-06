@@ -1,3 +1,35 @@
 .c-nav {
   background-color: coral;
+
+  > ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--s-2);
+  }
+
+  > ul a {
+    text-decoration: none;
+    color: currentColor;
+    display: block;
+    padding: var(--s-5) var(--s-3);
+  }
+
+  @media (hover: hover) {
+    a:hover {
+      background: red;
+    }
+  }
+
+  @media screen and (min-width: 900px) {
+    ul {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
 }

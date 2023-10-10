@@ -2,4 +2,8 @@
   background: #efefef;
   height: min-content;
   padding: 12px;
+
+  > img {
+    height: 100%;
+  }
 }

@@ -2,10 +2,13 @@
   display: grid;
   grid-template-areas:
   'content'
-  'image';
+  'image'
+  'copyright';
 
-  gap: var(--s3);
+  gap: var(--s1);
+
   justify-content: center;
+  font-family: Arial;
 
   > .c-imageFrame {
     grid-area: image;
@@ -16,7 +19,7 @@
     }
   }
 
-  > section {
+  &__content {
     grid-area: content;
 
     h1 {
@@ -24,7 +27,15 @@
       margin-bottom: var(--s1);
       line-height: 1;
       font-weight: 400;
-      font-size: var(--f2);
+      text-transform: uppercase;
+      line-height: 0.98;
+      letter-spacing: 0;
+      font-family: 'Raleway', sans-serif;
+
+      @media screen and (min-width: 900px) {
+        font-size: var(--f2);
+        color: var(--clr-1);
+      }
     }
 
     > * {
@@ -32,26 +43,43 @@
     }
 
     div {
-      margin-top: var(--s4);
+      color: var(--clr-1);
 
       a {
-        margin: var(--s1) 0;
+        margin-top: var(--s1);
         display: block;
         color: currentColor;
       }
     }
+
+    [href*="mailto"] {
+      font-style: italic;
+      font-weight: bold;
+      margin-bottom: 0;
+    }
+
+    svg {
+      height: 32px;
+      width: 32px;
+      fill: var(--clr-1);
+    }
   }
 
-  > section > h1 > span {
+  &__content > h1 > span {
     display: block;
   }
 
-  a[href*="mailto"] {
-    text-transform: lowercase;
+  &__copyright {
+    grid-area: copyright;
+    align-self: flex-end;
   }
 
   @media screen and (min-width: 1100px) {
     grid-template-areas:
-    'image content';
+    'image content'
+    'image copyright';
+    grid-template-columns: repeat(2, minmax(400px, 600px));
+    grid-template-rows: min-content min-content;
+    gap: var(--s3);
   }
 }

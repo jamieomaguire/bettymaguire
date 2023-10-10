@@ -1,10 +1,13 @@
 .c-logo {
+  color: var(--clr-1);
+  text-transform: uppercase;
 
   a {
     font-size: var(--f2);
     text-decoration: none;
     color: currentColor;
-    line-height: 1.1;
+    line-height: 0.98;
+    letter-spacing: 0;
   }
 
   a > span {
@@ -13,5 +16,7 @@
 
   > p {
     margin-top: var(--s-2);
+    line-height: 1.55;
+    letter-spacing: 0.127px;
   }
 }

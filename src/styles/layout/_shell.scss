@@ -3,15 +3,27 @@ body {
   display: grid;
 
   grid-template-areas:
-    'header'
-    'nav'
-    'main';
+  'nav'
+  'header'
+  'main';
 
   grid-template-columns: 1fr;
   grid-template-rows: min-content min-content 1fr;
 
   > * {
-    padding: var(--s1);
+    padding: 18px;
+  }
+
+  >.c-header {
+    grid-area: header;
+  }
+
+  >.c-nav {
+    grid-area: nav;
+  }
+
+  >.c-main {
+    grid-area: main;
   }
 
   @media screen and (min-width: 900px) {
@@ -21,16 +33,8 @@ body {
       'header header'
       'nav main';
 
-    >.c-header {
-      grid-area: header;
-    }
-
-    >.c-nav {
-      grid-area: nav;
-    }
-
-    >.c-main {
-      grid-area: main;
-    }
+    > * {
+      padding: var(--s1);
+    }    
   }
 }

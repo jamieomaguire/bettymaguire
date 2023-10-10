@@ -1,22 +1,28 @@
 ---
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
-import '../styles/main.scss';
+import "../styles/main.scss";
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Betty Maguire - Movement and visual artist" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<title>{title}</title>
-	</head>
-	<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Betty Maguire - Movement and visual artist"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+  </head>
+  <body>
     <header class="c-header">
       <div class="c-logo">
         <a href="/">
@@ -34,6 +40,6 @@ import '../styles/main.scss';
         <li><a href="/documentary">Documentary</a></li>
       </ul>
     </nav>
-		<slot />
-	</body>
+    <slot />
+  </body>
 </html>

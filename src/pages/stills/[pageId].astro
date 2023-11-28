@@ -1,0 +1,80 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ImageGallery from "../../components/ImageGallery.astro";
+
+import stills1 from "../../images/stills/1.jpg";
+import stills2 from "../../images/stills/2.jpg";
+import stills3 from "../../images/stills/3.jpg";
+import stills4a from "../../images/stills/4a.jpg";
+import stills4b from "../../images/stills/4b.jpg";
+import stills5 from "../../images/stills/5.jpg";
+import stills6 from "../../images/stills/6.jpg";
+import stills7 from "../../images/stills/7.jpg";
+import stills8 from "../../images/stills/8.jpg";
+import stills9 from "../../images/stills/9.jpg";
+import stills10 from "../../images/stills/10.jpg";
+import stills11 from "../../images/stills/11.jpg";
+import stills12 from "../../images/stills/12.jpg";
+import stills14 from "../../images/stills/14.jpg";
+import stills15 from "../../images/stills/15.jpg";
+import stills16 from "../../images/stills/16.jpg";
+import stills17 from "../../images/stills/17.jpg";
+import stills18a from "../../images/stills/18a.jpg";
+import stills18b from "../../images/stills/18b.jpg";
+
+export function getStaticPaths() {
+  return [
+    {params: {pageId: '1'}},
+    {params: {pageId: '2'}},
+    {params: {pageId: '3'}},
+    {params: {pageId: '4'}},
+    {params: {pageId: '5'}},
+    {params: {pageId: '6'}},
+    {params: {pageId: '7'}},
+    {params: {pageId: '8'}},
+    {params: {pageId: '9'}},
+    {params: {pageId: '10'}},
+    {params: {pageId: '11'}},
+    {params: {pageId: '12'}},
+    {params: {pageId: '14'}},
+    {params: {pageId: '15'}},
+    {params: {pageId: '16'}},
+    {params: {pageId: '17'}},
+    {params: {pageId: '18'}},
+  ];
+}
+
+const pageContent = new Map<string, ImageMetadata[]>([
+  ['1', [stills1]],
+  ['2', [stills2]],
+  ['3', [stills3]],
+  ['4', [stills4a, stills4b]],
+  ['5', [stills5]],
+  ['6', [stills6]],
+  ['7', [stills7]],
+  ['8', [stills8]],
+  ['9', [stills9]],
+  ['10', [stills10]],
+  ['11', [stills11]],
+  ['12', [stills12]],
+  ['14', [stills14]],
+  ['15', [stills15]],
+  ['16', [stills16]],
+  ['17', [stills17]],
+  ['18', [stills18a, stills18b]]
+]);
+
+
+const { pageId } = Astro.params;
+
+const currentPageImages: ImageMetadata[] = pageContent.get(pageId) || [];
+
+---
+
+<Layout title={`Betty Maguire - Page ${pageId}`}>
+  <main class="c-main">
+    <div class="c-comingSoon">
+      <ImageGallery images={currentPageImages} />
+    </div>
+  </main>
+</Layout>

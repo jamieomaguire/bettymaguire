@@ -1,0 +1,31 @@
+---
+import { Image } from "astro:assets";
+
+
+interface Props {
+  images: ImageMetadata[]
+}
+
+const { images } = Astro.props;
+
+// const pages = new Map<string, ImageMetadata[]>([
+//   ['1', [stills1]],
+//   ['2', [stills2]],
+// ]);
+
+
+// const currentPageImages: ImageMetadata[] = pages.get(pageNumber) || [];
+---
+
+<div>
+  {images.map(src => (
+    <div class="c-imageFrame">
+      <Image
+        src={src}
+        alt='A portrait photo taken by photographer, Betty Maguire.'
+      />
+    </div>
+  ))}
+</div>
+
+<style></style>

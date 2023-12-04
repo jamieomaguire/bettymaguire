@@ -1,0 +1,31 @@
+---
+import { stillsPageContent } from "../data/stillsPages.astro";
+
+interface Props {
+  pageId: string,
+  pageType: "stills" | "docs"
+}
+
+const { pageId, pageType } = Astro.props;
+
+const currentPageId = parseInt(pageId);
+const totalNumberOfPages = stillsPageContent.size;
+
+const getNextPageId = () => {
+  return currentPageId < totalNumberOfPages ? currentPageId + 1 : 1;
+};
+
+const getPreviousPageId = () => {
+  return currentPageId > 1 ? currentPageId - 1 : totalNumberOfPages;
+};
+
+const nextPageId = getNextPageId();
+const prevPageId = getPreviousPageId();
+
+const basePath = pageType === "stills" ? "/stills/" : "/documentary/";
+---
+
+<nav>
+  <a href={`${basePath}${prevPageId}`}>Previous</a>
+  <a href={`${basePath}${nextPageId}`}>Next</a>
+</nav>

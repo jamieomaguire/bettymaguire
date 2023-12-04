@@ -1,10 +1,12 @@
 ---
 interface Props {
   title: string;
+  pageId: string;
 }
 
-const { title } = Astro.props;
+const { title, pageId } = Astro.props;
 import "../styles/main.scss";
+import Navigator from "../components/Navigator.astro";
 ---
 
 <!doctype html>
@@ -39,6 +41,8 @@ import "../styles/main.scss";
         <li><a href="/motion">Motion</a></li>
         <li><a href="/documentary">Documentary</a></li>
       </ul>
+
+      <Navigator pageType="stills" pageId={pageId}></Navigator>
     </nav>
     <slot />
   </body>

@@ -1,15 +1,19 @@
 ---
 import { stillsPageContent } from "../data/stillsPages.astro";
+import { documentaryPagesContent } from "../data/documentaryPages.astro";
 
 interface Props {
   pageId: string,
-  pageType: "stills" | "docs"
+  pageType: "stills" | "documentary"
 }
 
 const { pageId, pageType } = Astro.props;
 
 const currentPageId = parseInt(pageId);
-const totalNumberOfPages = stillsPageContent.size;
+
+// Determine which content map to use based on pageType
+const contentMap = pageType === "stills" ? stillsPageContent : documentaryPagesContent;
+const totalNumberOfPages = contentMap.size;
 
 const getNextPageId = () => {
   return currentPageId < totalNumberOfPages ? currentPageId + 1 : 1;

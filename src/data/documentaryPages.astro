@@ -1,0 +1,31 @@
+---
+import docs1 from "../images/documentary/1.jpg";
+import docs2 from "../images/documentary/2.jpg";
+import docs3 from "../images/documentary/3.jpg";
+import docs4 from "../images/documentary/4.jpg";
+import docs5 from "../images/documentary/5.jpg";
+import docs6 from "../images/documentary/6.jpg";
+import docs7 from "../images/documentary/7.jpg";
+import docs8 from "../images/documentary/8.jpg";
+import docs9 from "../images/documentary/9.jpg";
+import docs10 from "../images/documentary/10.jpg";
+import docs11 from "../images/documentary/11.jpg";
+import docs12 from "../images/documentary/12.jpg";
+
+export const documentaryPagesContent = new Map<string, ImageMetadata[]>(
+  [
+    docs1,
+    docs2,
+    docs3,
+    docs4,
+    docs5,
+    docs6,
+    docs7,
+    docs8,
+    docs9,
+    docs10,
+    docs11,
+    docs12
+  ].map((image, index) => [`${index + 1}`, [image]]),
+);
+---

@@ -1,0 +1,22 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ImageGallery from "../../components/ImageGallery.astro";
+import { documentaryPagesContent } from "../../data/documentaryPages.astro";
+
+export function getStaticPaths() {
+  return Array.from(documentaryPagesContent.keys()).map(key => ({ params: { pageId: key } }));
+}
+
+const { pageId } = Astro.params;
+
+const currentPageImages: ImageMetadata[] = documentaryPagesContent.get(pageId) || [];
+
+---
+
+<Layout title={`Betty Maguire - Documentary Page ${pageId}`} pageId={pageId} pageType="documentary">
+  <main class="c-main">
+    <div class="c-comingSoon">
+      <ImageGallery images={currentPageImages} />
+    </div>
+  </main>
+</Layout>

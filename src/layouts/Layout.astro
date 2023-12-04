@@ -1,10 +1,11 @@
 ---
 interface Props {
   title: string;
-  pageId: string;
+  pageId?: string;
+  pageType?: "stills" | "documentary";
 }
 
-const { title, pageId } = Astro.props;
+const { title, pageId, pageType } = Astro.props;
 import "../styles/main.scss";
 import Navigator from "../components/Navigator.astro";
 ---
@@ -37,12 +38,12 @@ import Navigator from "../components/Navigator.astro";
     <nav class="c-nav">
       <ul>
         <li><a href="/contact">Contact</a></li>
-        <li><a href="/stills">Stills</a></li>
+        <li><a href="/stills/1">Stills</a></li>
         <li><a href="/motion">Motion</a></li>
-        <li><a href="/documentary">Documentary</a></li>
+        <li><a href="/documentary/1">Documentary</a></li>
       </ul>
 
-      <Navigator pageType="stills" pageId={pageId}></Navigator>
+      {pageId && pageType && <Navigator pageId={pageId} pageType={pageType}></Navigator>}
     </nav>
     <slot />
   </body>

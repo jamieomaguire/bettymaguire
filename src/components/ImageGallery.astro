@@ -8,7 +8,6 @@ interface Props {
 const { images } = Astro.props;
 ---
 
-<div>
   {images.map(src => (
     <div class="c-imageFrame">
       <Image
@@ -17,6 +16,5 @@ const { images } = Astro.props;
       />
     </div>
   ))}
-</div>
 
 <style></style>

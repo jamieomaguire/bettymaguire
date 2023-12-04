@@ -15,8 +15,6 @@ const currentPageImages: ImageMetadata[] = stillsPageContent.get(pageId) || [];
 
 <Layout title={`Betty Maguire - Stills Page ${pageId}`} pageId={pageId} pageType="stills">
   <main class="c-main">
-    <div class="c-comingSoon">
-      <ImageGallery images={currentPageImages} />
-    </div>
+    <ImageGallery images={currentPageImages} />
   </main>
 </Layout>

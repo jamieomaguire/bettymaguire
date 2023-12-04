@@ -1,8 +1,10 @@
 .c-nav {
-    text-transform: uppercase;
-    background-color: #F4F4F4;
+  display: grid;
+  grid-template-rows: 1fr min-content;
+  text-transform: uppercase;
+  background-color: #F4F4F4;
 
-  > ul {
+  >ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -14,7 +16,7 @@
     font-size: 0.9rem;
   }
 
-  > ul a {
+  >ul a {
     text-decoration: none;
     color: currentColor;
     display: block;
@@ -38,5 +40,9 @@
     li {
       width: 100%;
     }
+  }
+
+  >ul {
+    align-self: baseline;
   }
 }
